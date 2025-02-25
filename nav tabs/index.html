@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .tabs-container {
+    width: 100%;
+  }
+
+  .nav-tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-tabs li {
+    display: inline-block;
+  }
+
+  .nav-tabs li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f1f1f1;
+  }
+
+  .nav-tabs li a:hover {
+    background-color: #ddd;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+
+  .tab-content h2 {
+    margin-top: 0;
+  }
+
+  .tab-content p {
+    margin-bottom: 0;
+  }
+
+</style>
+<body>
+  <div class="tabs-container">
+    <ul class="nav-tabs">
+      <li><a href="#tab1">Tab 1</a></li>
+      <li><a href="#tab2">Tab 2</a></li>
+      <li><a href="#tab3">Tab 3</a></li>
+    </ul>
+  
+    <div class="tab-content" id="tab1" style="display: block;">
+      <h2>Tab 1 Content</h2>
+      <p>This is the content of tab 1.</p>
+    </div>
+    
+    <div class="tab-content" id="tab2">
+      <h2>Tab 2 Content</h2>
+      <p>This is the content of tab 2.</p>
+    </div>
+    
+    <div class="tab-content" id="tab3">
+      <h2>Tab 3 Content</h2>
+      <p>This is the content of tab 3.</p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tabs = document.querySelectorAll('.nav-tabs li a');
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetTab = document.querySelector(targetId);
+          
+          document.querySelectorAll('.tab-content').forEach(function(content) {
+            content.style.display = 'none';
+          });
+          
+          targetTab.style.display = 'block';
+        });
+      });
+    });
+
+  </script>
+</body>
+</html>
