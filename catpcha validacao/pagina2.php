@@ -3,7 +3,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica se o reCAPTCHA foi marcado
-    $recaptchaSecretKey = "6Lf4WS8pAAAAAJt92Ez_nvEkJXv7Por8JPwABkJh";  // Substitua com a sua chave secreta
+    $recaptchaSecretKey = "seu captcha";  // Substitua com a sua chave secreta
     $recaptchaResponse = $_POST['g-recaptcha-response'];
 
     // Verifique se o reCAPTCHA foi marcado

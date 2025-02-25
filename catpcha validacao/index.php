@@ -14,7 +14,7 @@
         <input type="text" id="nome" name="nome" required><br><br>
 
         <!-- reCAPTCHA -->
-        <div class="g-recaptcha" data-sitekey="6Lf4WS8pAAAAAJt92Ez_nvEkJXv7Por8JPwABkJh"></div><br><br>
+        <div class="g-recaptcha" data-sitekey="seu-captcha"></div><br><br>
 
         <button type="submit">Enviar</button>
     </form>
