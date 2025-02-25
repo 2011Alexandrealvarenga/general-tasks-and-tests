@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://rotasp.local/wp-content/themes/rotasp-theme-prodesp/assets/lib/bootstrap.css?ver=6.3.1">
+</head>
+<style>
+  #form-home #bt-busca{
+    display: block;
+      margin: auto;
+    background-color:#000000 !important;
+    border-radius: 20px;
+  }
+  .content-form-pesquisa-categoria form{display: flex;}
+  .content-form-pesquisa-categoria form .content{
+    border: 3px solid #e4e4e4;
+    border-radius: 12px;
+    display: flex;
+  }
+  .content-form-pesquisa-categoria form .content input{border: none; border-radius: 4px;}
+  .content-form-pesquisa-categoria form .content input[type=submit] {
+    background: url(https://rota.sp.gov.br/wp-content/uploads/2023/09/search.svg);
+    border: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 33px;
+    padding: 6px;    
+    margin: 6px;
+}
+.content-form-pesquisa-categoria form .content #input_search:focus{outline-color: transparent;}
+
+
+
+</style>
+<body>
+  <div class="content-form-pesquisa-categoria">
+    <form action="catalogo-de-apis/" method="post">
+      <div class="content">
+        <input placeholder="Insira a palavra chave" type="text" id="input_search" name="input_search" value="">
+        <input id="bt-busca" type="submit" value="">
+      </div>
+    </form> 
+  </div>
+
+
+  <!-- <form action="catalogo-de-apis/" method="post">
+    <input placeholder="Insira pesquisa palavra chave" type="text" id="input_search" name="input_search" value=""><br><br>
+    <input id="bt-busca" type="submit" value="Pesquisar">
+  </form>  -->
+
+</body>
+</html>

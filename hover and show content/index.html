@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">
+    Hover over me
+  </div>
+  <div class="content" id="content1">This is the content that appears on hover!</div>
+  <style>
+    #box {
+    /* position: relative; */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    width: 200px;
+    text-align: center;
+}
+
+.content {
+    display: none; /* Initially hide the content */
+    /* position: absolute; */
+    top: 100%; /* Position it below the box */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    /* z-index: 1; */
+}
+
+#box:hover .content {
+    display: block; /* Show content on hover */
+}
+
+  </style>
+</body>
+</html>

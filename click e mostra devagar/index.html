@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Content Slowly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .outside_content{
+        border: 1px solid red;
+    }
+  #content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+  }
+
+  #content.visible {
+      opacity: 1;
+  }
+
+  .hidden {
+      display: none;
+  }
+</style>
+<body>
+    <button id="showButton">Show Content</button>
+    <div class="outside_content">
+
+        <div id="content" class="hidden">
+            <p>This is the content that will be shown slowly.</p>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById('showButton').addEventListener('click', function() {
+    const content = document.getElementById('content');
+    
+    if (content.classList.contains('visible')) {
+        // If content is currently visible, hide it
+        content.classList.remove('visible');
+        setTimeout(() => {
+            content.classList.add('hidden');
+        }, 1000); // Timeout should match the duration of the transition
+    } else {
+        // If content is hidden, show it
+        content.classList.remove('hidden');
+        setTimeout(() => {
+            content.classList.add('visible');
+        }, 10); // Short delay to ensure the browser registers the removal of 'hidden'
+    }
+});
+    </script>
+</body>
+</html>
