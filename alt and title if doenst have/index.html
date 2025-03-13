@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="download.jpg" alt=""><br>
+  <img src="carro 2.jpg" alt="este carro"><br>
+  teste
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona todas as imagens na página
+    const images = document.querySelectorAll("img");
+
+    images.forEach(img => {
+        // Verifica se a imagem tem um atributo src válido
+        if (img.src) {
+            // Obtém o nome do arquivo sem a extensão
+            const fileName = img.src.split('/').pop().split('.').shift();
+
+            // Verifica se ambos os atributos (alt e title) estão ausentes
+            if (!img.alt && !img.title) {
+                img.alt = fileName;
+                img.title = fileName;
+            }
+            // Verifica se o atributo alt está ausente
+            else if (!img.alt) {
+                img.alt = fileName;
+            }
+            // Verifica se o atributo title está ausente
+            else if (!img.title) {
+                img.title = fileName;
+            }
+        } else {
+            console.warn("Imagem sem atributo src:", img);
+        }
+    });
+});
+  </script>
+</body>
+</html>
